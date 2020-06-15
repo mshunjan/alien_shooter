@@ -24,15 +24,15 @@ def run_game():
     # Create the fleet of aliens
     gf.create_fleet(ai_settings, screen,ship, aliens)
 
-    # Set the background color.
+    # Set the background color.  
     bg_color = (230,230,230)
 
     # Begins the main loop for the game, and generates instances of each object.
     while True:
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
-        bullets.update()
-        gf.update_bullets(bullets)
+        gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
+        gf.update_aliens(ai_settings, aliens)
         gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
 run_game()
