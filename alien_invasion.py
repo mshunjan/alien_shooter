@@ -1,6 +1,7 @@
 import pygame
 import game_functions as gf 
 
+from alien import Alien
 from ship import Ship 
 from settings import Settings
 from pygame.sprite import Group 
